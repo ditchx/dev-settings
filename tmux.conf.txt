@@ -1,3 +1,5 @@
+source-file ~/line.tmux.conf
+
 unbind C-b
 set-option -g prefix `
 bind ` send-prefix
@@ -7,6 +9,8 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
+
+
 
 # Other examples:
 # set -g @plugin 'github_username/plugin_name'
