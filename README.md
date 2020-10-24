@@ -11,5 +11,6 @@ Import using dconf:
 
 
 Then load into mate terminal:
+
     $ mate-terminal --load-config=mate.terminal.conf 
 
