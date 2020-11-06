@@ -18,6 +18,9 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-obsession'
 Plug 'edkolev/tmuxline.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'ervandew/supertab'
 
 if has('nvim') || has('patch-8.0.902')
   Plug 'mhinz/vim-signify'
@@ -34,11 +37,13 @@ set number
 set numberwidth=2
 set updatetime=100
 set tabstop=4 shiftwidth=4 expandtab
+set splitright
 let g:molokai_original = 1
 let g:rehash256 = 1
 syntax enable
 colorscheme molokai
-
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 
 " NEDRTree Settings
 map <C-n> :NERDTreeToggle<CR>
@@ -62,6 +67,15 @@ let g:go_highlight_operators = 1
 let g:go_auto_type_info=1
 let g:go_fmt_command = "goimports"
 
+" fzf settings
+nnoremap <leader>s :<C-u>FZF<CR> 
+
+" SuperTab Settings
+let g:SuperTabClosePreviewOnPopupClose = 1
+autocmd FileType *
+  \ if &omnifunc != '' |
+  \   call SuperTabChain(&omnifunc, "<c-p>") |
+  \ endif
 
 " Signify Settings
 nnoremap <leader>gp :SignifyHunkDiff<cr>
