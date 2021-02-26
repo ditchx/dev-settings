@@ -13,7 +13,14 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 
+# Use vim-like bindings for navigating tmux buffer window
+set-window-option -g mode-keys vi
 
+# Auto-restore vim session
+set -g @resurrect-strategy-vim 'session'
+
+# Auto-restore tmux on server start
+set -g @continuum-restore 'on'
 
 # Other examples:
 # set -g @plugin 'github_username/plugin_name'
