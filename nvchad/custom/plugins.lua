@@ -129,8 +129,17 @@ local plugins = {
     end,
     build = ":call doge#install()",
   },
-
-
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = false,
+    -- optional for floating window border decoration
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+    keys = {
+      {"<silent><leader>gg", "<cmd>call LazyGit()<CR>"}
+    }
+  },
   
   -- To make a plugin not be loaded
   -- {
