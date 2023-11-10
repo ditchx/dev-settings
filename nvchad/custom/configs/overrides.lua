@@ -3,6 +3,11 @@ local M = {}
 vim.opt.termguicolors = true
 vim.cmd [[highlight IndentBlanklineIndent1 guibg=#171717 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent2 guibg=#161616 gui=nocombine]]
+vim.cmd [[highlight Normal guibg=none]]
+vim.cmd [[highlight NonText guibg=none]]
+vim.cmd [[highlight Normal ctermbg=none]]
+vim.cmd [[highlight NonText ctermbg=none]]
+vim.cmd [[highlight NormalFloat guibg=none]]
 
 M.treesitter = {
   ensure_installed = {
