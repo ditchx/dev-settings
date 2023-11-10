@@ -137,7 +137,7 @@ local plugins = {
         "nvim-lua/plenary.nvim",
     },
     keys = {
-      {"<silent><leader>gg", "<cmd>call LazyGit()<CR>"}
+      {"<leader>gg", "<cmd>LazyGit<CR>"}
     }
   },
   
